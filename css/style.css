@@ -1,0 +1,317 @@
+body {
+    background-color: #06122b;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 28px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+header button {
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 16px;
+    background-color: #17233f;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+header button:hover {transform: translateY(-2px);}
+
+header button img {width: 24px;}
+
+#input-pesquisa {
+    width: 100%;
+    max-width: 700px;
+    height: 52px;
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    background-color: #17233f;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+#input-pesquisa::placeholder {color: #8d99b8;}
+
+main {
+    width: 100%;
+    padding: 10px 36px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#container-clima {width: 100%;}
+
+.clima-principal {
+    width: 100%;
+    min-height: 320px;
+    background: linear-gradient(90deg, #6677f0, #7b4bc4);
+    border-radius: 32px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.informacoes-clima {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#cidade {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#temperatura {
+    font-size: 7rem;
+    font-weight: bold;
+}
+
+#descricao {font-size: 2rem;}
+
+#sensacao-termica {
+    color: #d7d7d7;
+    font-size: 1.1rem;
+}
+
+.temperatura-min-max {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.icone-clima img {width: 180px;}
+
+#informacoes-extras {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card-info {
+    background-color: #17233f;
+    border-radius: 22px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-info h3 {
+    color: #9fb0d3;
+    font-size: 1rem;
+}
+
+.card-info p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#previsao-horaria {
+    width: 100%;
+    background-color: #17233f;
+    border-radius: 28px;
+    padding: 28px;
+}
+
+#previsao-horaria h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+}
+
+.container-horarios {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+}
+
+.card-hora {
+    min-width: 90px;
+    background-color: #1f2c4d;
+    border-radius: 18px;
+    padding: 18px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-hora img {width: 38px;}
+
+.card-hora p, .card-hora span {font-size: 1rem;}
+
+#secao-semanal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+#previsao-semanal {
+    background-color: #17233f;
+    border-radius: 28px;
+    padding: 28px;
+}
+
+#previsao-semanal h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+}
+
+.card-semana {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+.card-semana img {width: 32px;}
+
+.temperatura-semana {
+    display: flex;
+    gap: 16px;
+}
+
+#informacoes-sol {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-sol {
+    background-color: #17233f;
+    border-radius: 28px;
+    padding: 28px;
+    flex: 1;
+}
+
+.card-sol h3 {
+    color: #9fb0d3;
+    margin-bottom: 14px;
+}
+
+.card-sol p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#secao-grafico {
+    width: 100%;
+    background-color: #17233f;
+    border-radius: 28px;
+    padding: 28px;
+}
+
+#secao-grafico h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+}
+
+#grafico-temperatura {
+    width: 100%;
+    height: 320px;
+}
+
+footer {
+    margin: 20px 0;
+    color: #7f8aa8;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+
+    header {padding: 24px 20px;}
+
+    main {padding: 10px 20px 30px;}
+
+    .clima-principal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    #temperatura {font-size: 5rem;}
+
+    .icone-clima {align-self: center;}
+
+    #informacoes-extras {grid-template-columns: repeat(2, 1fr);}
+
+    #secao-semanal {grid-template-columns: 1fr;}
+}
+
+@media (max-width: 375px) {
+
+    header {
+        padding: 18px 12px;
+        gap: 10px;
+    }
+
+    header button {
+        width: 46px;
+        height: 46px;
+    }
+
+    #input-pesquisa {
+        height: 46px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 10px 12px 24px;
+        gap: 18px;
+    }
+
+    .clima-principal {
+        padding: 28px 22px;
+        border-radius: 24px;
+    }
+
+    #cidade {font-size: 1.5rem;}
+
+    #temperatura {font-size: 4rem;}
+
+    #descricao {font-size: 1.3rem;}
+
+    .icone-clima img {width: 120px;}
+
+    #informacoes-extras {grid-template-columns: 1fr;}
+
+    .card-info {padding: 22px;}
+
+    .card-info p {font-size: 1.5rem;}
+
+    #previsao-horaria, #previsao-semanal, .card-sol, #secao-grafico {
+        padding: 22px;
+        border-radius: 22px;
+    }
+
+    .card-hora {min-width: 78px;}
+
+    .card-semana {font-size: 0.9rem;}
+
+    .temperatura-semana {gap: 10px;}
+
+    .card-sol p {font-size: 1.5rem;}
+
+    footer {
+        text-align: center;
+        padding: 0 12px;
+    }
+}
