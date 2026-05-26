@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./main.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+
+        <button id="botao-tema">
+            <img src="##" alt="Tema">
+        </button>
+
+        <input type="text" id="input-pesquisa" placeholder="Pesquisar cidade..." autocomplete="off">
+
+        <button id="botao-localizacao">
+            <img src="##" alt="Localização">
+        </button>
+
+    </header>
+
+    <main>
+
+        <section id="container-clima">
+            <div class="clima-principal">
+
+                <div class="informacoes-clima">
+                    <h2 id="cidade">São Paulo</h2>
+                    <h1 id="temperatura">16°</h1>
+                    <p id="descricao">Nublado</p>
+                    <p id="sensacao-termica">Sensação térmica 17°</p>
+                    
+                    <div class="temperatura-min-max">
+                        <span id="temperatura-maxima">↑ 23°</span>
+                        <span id="temperatura-minima">↓ 15°</span>
+                    </div>
+                </div>
+
+                <div class="icone-clima">
+                    <img id="icone-principal" src="##" alt="Ícone do clima">
+                </div>
+
+            </div>
+        </section>
+
+        <section id="informacoes-extras">
+            <div class="card-info">
+                <h3>Umidade</h3>
+                <p id="umidade">97%</p>
+            </div>
+
+            <div class="card-info">
+                <h3>Vento</h3>
+                <p id="vento">6 km/h</p>
+            </div>
+
+            <div class="card-info">
+                <h3>Chuva</h3>
+                <p id="chuva">100%</p>
+            </div>
+
+            <div class="card-info">
+                <h3>Índice UV</h3>
+                <p id="indice-uv">4</p>
+            </div>
+        </section>
+
+        <section id="previsao-horaria">
+            <h2>Previsão por Hora</h2>
+            <div class="container-horarios">
+                <div class="card-hora">
+                    <p>0h</p>
+                    <img src="##" alt="Ícone">
+                    <span>16°</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="secao-semanal">
+            <div id="previsao-semanal">
+                <h2>Previsão Semanal</h2>
+                
+                <div class="card-semana">
+                    <span>Hoje</span>
+                    <img src="##" alt="Ícone">
+                    
+                    <div class="temperatura-semana">
+                        <span>15°</span>
+                        <span>23°</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="informacoes-sol">
+                <div class="card-sol">
+                    <h3>Nascer do Sol</h3>
+                    <p id="nascer-sol">06:37</p>
+                </div>
+
+                <div class="card-sol">
+                    <h3>Pôr do Sol</h3>
+                    <p id="por-sol">17:28</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="secao-grafico">
+            <h2>Temperatura ao Longo do Dia</h2>
+            <canvas id="grafico-temperatura"></canvas>
+        </section>
+
+    </main>
+    
+    <footer>
+        © Lucas Alexandre da Silva - Todos os direitos estão reservados.
+    </footer>
+
+</body>
+</html>
